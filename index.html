@@ -11,7 +11,13 @@
         <div></div>
         <div></div>
         <div class="side" id="player-side">
-            <div class="avatar-header flex jc-center ai-center">Player Name</div>
+            <div class="avatar-header flex jc-center ai-center">
+                <select name="character" id="character">
+                    <option selected="true" disabled>Choose your character</option>
+                    <option value="stan">Stan</option>
+                    <option value="kenny">Kenny</option>
+                </select>
+            </div>
             <div class="avatar" id="player-avatar"></div>
             <div class="choice-header flex jc-center ai-center">Player Choice</div>
             <div class="choice flex jc-center ai-center" id="player-choice"></div>

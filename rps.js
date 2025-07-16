@@ -10,35 +10,28 @@ let computerScore = 0;
 
 // Play 1 round
 function playRound(humanChoice, computerChoice) {
-
-    
      
+    // Generate computer choice and images
      computerChoice = getComputerChoice();
-     console.log(`You chose ${humanChoice}.`);
-     console.log(`Computer chose ${computerChoice}.`);
 
      let compChoice = document.querySelector("#computer-choice");
      compChoice.textContent = ""
      let img = document.createElement("img");
-
     if (computerChoice === "rock") {
         img.src = "images/rock.webp";
         img.style.width = "50%";
         compChoice.appendChild(img);
     }
-
     if (computerChoice === "paper") {
         img.src = "images/Towelie.webp";
         img.style.width = "50%";
         compChoice.appendChild(img);
     }
-
     if (computerChoice === "scissors") {
         img.src = "images/scissors.gif";
         img.style.width = "50%";
         compChoice.appendChild(img);
     }
-
 
                 // Tie
      if (humanChoice === computerChoice) {
@@ -76,6 +69,12 @@ function playRound(humanChoice, computerChoice) {
 
      if (humanScore === 5) alert("You win");
      if (computerScore === 5) alert("You lose");
+
+     if (humanScore === 5 || computerScore === 5) {
+        rock.disabled = true;
+        paper.disabled = true;
+        scissors.disabled = true;
+    }
      
                 
 }
@@ -138,5 +137,24 @@ scissors.addEventListener("click", () => {
     img.style.width = "50%";
     playerChoice.appendChild(img);
 })
+
+let avatar = document.querySelector("#player-avatar");
+let characterChoice = document.querySelector("character")
+if (characterChoice = "stan") {
+    let stan = document.createElement("img")
+    stan.src = "images/stan-marsh.png"
+    avatar.appendChild(stan)
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
