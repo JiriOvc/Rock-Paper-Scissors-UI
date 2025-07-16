@@ -4,11 +4,6 @@ function getComputerChoice() {
     return computerChoice[Math.floor(Math.random() * computerChoice.length)];
 }
 
-// User input
-function getHumanChoice() {
-    return humanChoice = prompt("Choose rock, paper or scissors:").toLowerCase();
-}
-
 // Scores
 let humanScore = 0;
 let computerScore = 0;
@@ -46,7 +41,23 @@ function playRound(humanChoice, computerChoice) {
      } else if (humanChoice === "scissors" && computerChoice === "paper") {
         console.log(`You win! Scissors beat rock.`);
         humanScore++;
-     }         
+     }
+     
+     let playerScore = document.querySelector("#player-score")
+     playerScore.textContent = humanScore
+
+     let computerScoreCount = document.querySelector("#computer-score")
+     computerScoreCount.textContent = computerScore
+
+     if (humanScore === 5) {
+       
+     }
+
+     if (computerScore === 5) {
+        
+     }
+
+     
                 
 }
 
@@ -87,3 +98,5 @@ let scissors = document.querySelector("#scissors")
 scissors.addEventListener("click", () => {
     playRound("scissors")
 })
+
+
