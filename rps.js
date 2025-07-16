@@ -10,9 +10,35 @@ let computerScore = 0;
 
 // Play 1 round
 function playRound(humanChoice, computerChoice) {
+
+    
+     
      computerChoice = getComputerChoice();
      console.log(`You chose ${humanChoice}.`);
      console.log(`Computer chose ${computerChoice}.`);
+
+     let compChoice = document.querySelector("#computer-choice");
+     compChoice.textContent = ""
+     let img = document.createElement("img");
+
+    if (computerChoice === "rock") {
+        img.src = "images/rock.webp";
+        img.style.width = "50%";
+        compChoice.appendChild(img);
+    }
+
+    if (computerChoice === "paper") {
+        img.src = "images/Towelie.webp";
+        img.style.width = "50%";
+        compChoice.appendChild(img);
+    }
+
+    if (computerChoice === "scissors") {
+        img.src = "images/scissors.gif";
+        img.style.width = "50%";
+        compChoice.appendChild(img);
+    }
+
 
                 // Tie
      if (humanChoice === computerChoice) {
@@ -43,20 +69,13 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
      }
      
-     let playerScore = document.querySelector("#player-score")
-     playerScore.textContent = humanScore
+     let playerScore = document.querySelector("#player-score");
+     playerScore.textContent = humanScore;
+     let computerScoreCount = document.querySelector("#computer-score");
+     computerScoreCount.textContent = computerScore;
 
-     let computerScoreCount = document.querySelector("#computer-score")
-     computerScoreCount.textContent = computerScore
-
-     if (humanScore === 5) {
-       
-     }
-
-     if (computerScore === 5) {
-        
-     }
-
+     if (humanScore === 5) alert("You win");
+     if (computerScore === 5) alert("You lose");
      
                 
 }
@@ -84,19 +103,40 @@ function playGame(){
 }
 
 
+//Player clicks Rock
 let rock = document.querySelector("#rock")
 rock.addEventListener("click", () => {
-    playRound("rock")
+    playRound("rock");
+    let playerChoice = document.querySelector("#player-choice");
+    playerChoice.textContent = ""
+    let img = document.createElement("img");
+    img.src = "images/rock.webp";
+    img.style.width = "50%";
+    playerChoice.appendChild(img);
+    
 })
+
 
 let paper = document.querySelector("#paper")
 paper.addEventListener("click", () => {
     playRound("paper")
+    let playerChoice = document.querySelector("#player-choice");
+    playerChoice.textContent = ""
+    let img = document.createElement("img");
+    img.src = "images/Towelie.webp";
+    img.style.width = "50%";
+    playerChoice.appendChild(img);
 })
 
 let scissors = document.querySelector("#scissors")
 scissors.addEventListener("click", () => {
     playRound("scissors")
+    let playerChoice = document.querySelector("#player-choice");
+    playerChoice.textContent = ""
+    let img = document.createElement("img");
+    img.src = "images/scissors.gif";
+    img.style.width = "50%";
+    playerChoice.appendChild(img);
 })
 
 
