@@ -15,7 +15,6 @@ let computerScore = 0;
 
 // Play 1 round
 function playRound(humanChoice, computerChoice) {
-     humanChoice = getHumanChoice();
      computerChoice = getComputerChoice();
      console.log(`You chose ${humanChoice}.`);
      console.log(`Computer chose ${computerChoice}.`);
@@ -74,4 +73,17 @@ function playGame(){
 }
 
 
-playGame()
+let rock = document.querySelector("#rock")
+rock.addEventListener("click", () => {
+    playRound("rock")
+})
+
+let paper = document.querySelector("#paper")
+paper.addEventListener("click", () => {
+    playRound("paper")
+})
+
+let scissors = document.querySelector("#scissors")
+scissors.addEventListener("click", () => {
+    playRound("scissors")
+})
