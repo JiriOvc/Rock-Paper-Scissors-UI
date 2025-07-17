@@ -138,13 +138,6 @@ scissors.addEventListener("click", () => {
     playerChoice.appendChild(img);
 })
 
-let avatar = document.querySelector("#player-avatar");
-let characterChoice = document.querySelector("character")
-if (characterChoice = "stan") {
-    let stan = document.createElement("img")
-    stan.src = "images/stan-marsh.png"
-    avatar.appendChild(stan)
-}
 
 
 
