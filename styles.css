@@ -29,6 +29,7 @@
 .choice-container {
     display: flex;
     flex-direction: column;
+    border: 1px solid red;
 }
 
 .player-choice {
@@ -37,8 +38,26 @@
     margin: 5px;
 }
 
+.new-game {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+}
+
+.new-game:hover {
+    background-color: black;
+    color: white;
+}
+
 .player-choice:hover {
     background-color: orange;
+}
+
+.result {
+    height: 50px;
+    width: 370px;
+    margin-top: 10px;
+    font-size: 3em;
 }
 
 .side {
