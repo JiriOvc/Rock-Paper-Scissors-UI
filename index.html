@@ -4,12 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <div></div>
+        <div></div>
 
-    <script src="rps.js">
-        
-    </script>
-    
+        <div class="side" id="player-side">
+            <div class="avatar-header flex jc-center ai-center">Player: Butters</div>
+            <div class="avatar" id="player-avatar">
+                <img src="images/ButtersStotch.webp" alt="Butters Stotch">
+            </div>
+            <div class="choice-header flex jc-center ai-center">Player Choice</div>
+            <div class="choice flex jc-center ai-center" id="player-choice"></div>
+            <div class="score-header flex jc-center ai-center">Player Score</div>
+            <div class="score flex jc-center ai-center" id="player-score"></div>
+        </div>
+
+        <div class="choice-container jc-center ai-center">
+            <button class="new-game" id="new-game">Start New Game</button>
+            <button class="player-choice" id="rock">
+                <img src="images/rock.webp" alt="rock">
+            </button>
+            <button class="player-choice" id="paper">
+                <img src="images/Towelie.webp" alt="paper">
+            </button>
+            <button class="player-choice" id="scissors">
+                <img src="images/scissors.png">
+            </button>
+            <div class="result flex jc-center ai-center"></div>
+        </div>
+
+        <div class="side" id="computer-side">
+            <div class="avatar-header flex jc-center ai-center">A.W.E.S.O.M. - O</div>
+            <div class="avatar" id="computer-avatar">
+                <img src="images/Awesomo-4000.webp" alt="Awesome - O">
+            </div>
+            <div class="choice-header flex jc-center ai-center">A.W.E.S.O.M. - O Choice</div>
+            <div class="choice flex jc-center ai-center" id="computer-choice"></div>
+            <div class="score-header flex jc-center ai-center">A.W.E.S.O.M. - O Score</div>
+            <div class="score flex jc-center ai-center" id="computer-score"></div>
+        </div>
+
+        <div></div>
+        <div></div>
+    </div>
+
+
+
+    <script src="rps.js"></script>    
 </body>
 </html>
