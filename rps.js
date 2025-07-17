@@ -66,14 +66,18 @@ function playRound(humanChoice, computerChoice) {
      playerScore.textContent = humanScore;
      let computerScoreCount = document.querySelector("#computer-score");
      computerScoreCount.textContent = computerScore;
+     let result = document.querySelector(".result");
 
-     if (humanScore === 5) alert("You win");
-     if (computerScore === 5) alert("You lose");
+     if (humanScore === 5) result.textContent = "You won the game!";
+     if (computerScore === 5) result.textContent = "You lost the game!";
 
      if (humanScore === 5 || computerScore === 5) {
         rock.disabled = true;
         paper.disabled = true;
         scissors.disabled = true;
+        rock.style.backgroundColor = "lightgray";
+        paper.style.backgroundColor = "lightgray";
+        scissors.style.backgroundColor = "lightgray";
     }
      
                 
@@ -138,6 +142,10 @@ scissors.addEventListener("click", () => {
     playerChoice.appendChild(img);
 })
 
+let newGame = document.querySelector(".new-game")
+newGame.addEventListener("click", () => {
+    location.reload()
+})
 
 
 
