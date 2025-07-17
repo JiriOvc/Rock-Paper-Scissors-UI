@@ -28,7 +28,7 @@ function playRound(humanChoice, computerChoice) {
         compChoice.appendChild(img);
     }
     if (computerChoice === "scissors") {
-        img.src = "images/scissors.gif";
+        img.src = "images/scissors.png";
         img.style.width = "50%";
         compChoice.appendChild(img);
     }
@@ -133,7 +133,7 @@ scissors.addEventListener("click", () => {
     let playerChoice = document.querySelector("#player-choice");
     playerChoice.textContent = ""
     let img = document.createElement("img");
-    img.src = "images/scissors.gif";
+    img.src = "images/scissors.png";
     img.style.width = "50%";
     playerChoice.appendChild(img);
 })
